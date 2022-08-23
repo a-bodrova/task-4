@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Seal",
+    "description": "Lorem Ipsum has been the industrys standard dummy text ever since title. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text.",
+    "image": "/images/seal.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Primate",
+    "description": "It was popularised in the 1960s with the release of Letraset sheets",
+    "image": "/images/primate.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Hyena",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et",
+    "image": "/images/hyena.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Giraffe",
+    "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui. If you are going to use a passage of Lorem Ipsum",
+    "image": "/images/giraffe.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Fox",
+    "description": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text.",
+    "image": "/images/fox.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Deer",
+    "description": "Lorem Ipsum has been the industrys standard dummy text ever since the",
+    "image": "/images/deer.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Cheetah",
+    "description": "It was popularised in the 1960s with the release of Letraset sheets",
+    "image": "/images/cheetah.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Antelope",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
+    "image": "/images/antelope.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Bee",
+    "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui",
+    "image": "/images/bee.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Bird",
+    "description": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text.",
+    "image": "/images/bird.jpg"
+  }
+]
