@@ -1,15 +1,15 @@
-import React, { useState, ChangeEventHandler, useEffect } from 'react';
+import React, { useState, ChangeEventHandler } from 'react';
 import styles from '../../styles/Board.module.css';
-import SortingSelect from '../SortingSelect/SortingSelect';
 import * as options from '../../data/sortingOptions.json'; 
+import { IPost } from '../../interfaces/IPost';
+import { IOptions } from '../../interfaces/IOptions';
 import { SortType } from '../../interfaces/SortType';
-import postsData from '../../pages/_posts/posts.json';
 import Card from '../Card/Card';
 import Search from '../Search/Search';
-import { IOptions } from '../../interfaces/IOptions';
+import SortingSelect from '../SortingSelect/SortingSelect';
 import useFilters from '../../hooks/useFilters';
 
-const Board = () => {
+const Board: React.FC<{ cards: IPost[] }> = ({ cards }) => {
   const [filters, setFilters] = useState<IOptions>({
     filter: {
       name: 'description',
@@ -18,7 +18,7 @@ const Board = () => {
     sort: "ASC"
   });
 
-  const { result } = useFilters(postsData, filters);
+  const { result } = useFilters(cards, filters);
 
   const handleFilter: ChangeEventHandler<HTMLSelectElement | HTMLInputElement> = (e) => {
     const { name, value } = e.target;
@@ -54,7 +54,7 @@ const Board = () => {
     <section className={styles.board}>
       <div className={styles.board__sort_items} >
         <SortingSelect name="sort" options={Array.from(options)} handler={handleFilter} />
-        <Search handler={handleFilter} />
+        <Search name="description" handler={handleFilter} />
       </div>
       <div className={styles.cards}>
         {

@@ -1,11 +1,16 @@
 import { ChangeEventHandler } from "react"
 
-const Search: React.FC<{ handler: ChangeEventHandler<HTMLInputElement> }> = ({ handler }) => {
+interface ISearchProps {
+  name: string;
+  handler: ChangeEventHandler<HTMLInputElement>
+}
+
+const Search: React.FC<ISearchProps> = ({ name, handler }) => {
   return (
     <input
       id="search-posts"
       type="text"
-      name="description"
+      name={name}
       placeholder="Search"
       onChange={handler}
       autoComplete="off"

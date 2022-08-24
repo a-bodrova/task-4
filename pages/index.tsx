@@ -4,11 +4,6 @@ import styles from '../styles/Home.module.css'
 import { getData } from '../lib/api'
 import { IPost } from '../interfaces/IPost'
 import Board from '../components/Board/Board'
-import Card from '../components/Card/Card'
-
-interface IHomeProps {
-  posts: IPost[]
-}
 
 const Home: NextPage<{ posts: IPost[] }> = ({ posts }) => {
 
@@ -22,7 +17,7 @@ const Home: NextPage<{ posts: IPost[] }> = ({ posts }) => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Posts</h1>
-        <Board />
+        <Board cards={Array.from(posts)} />
       </main>
     </div>
   )
