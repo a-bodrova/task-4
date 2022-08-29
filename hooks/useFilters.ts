@@ -1,25 +1,32 @@
+import { useMemo } from 'react';
 import { IOptions } from "../interfaces/IOptions";
 import { IPost } from "../interfaces/IPost";
 
 const useFilters = (posts: IPost[], options: IOptions): { result: IPost[] } => {
 
-  const sorteredData = posts.sort((a, b) => {
+  const data = useMemo(() => {
+    return posts.filter((post) => (post[options.filter.name] as string)
+      .toLowerCase()
+      .includes(options.filter.value.toLowerCase()));
+  }, [posts, options.filter]);
+
+    useMemo(() => {
       switch (options.sort) {
 
         case "DESC": {
-          return b.id - a.id;
+          data.sort((a, b) => b.id - a.id);
+          break;
         }
 
         case "ASC":
         default: {
-          return a.id - b.id;
+          data.sort((a, b) => a.id - b.id);
+          break;
         }
-      };
-  });
 
-  const result = sorteredData
-    .filter((post) => (post[options.filter.name] as string).toLowerCase().includes(options.filter.value.toLowerCase()))
-  return { result };
+  }}, [data, options.sort]);
+
+  return { result: data };
 }
 
 export default useFilters;

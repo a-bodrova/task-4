@@ -9,7 +9,7 @@ const Search: React.FC<ISearchProps> = ({ name, handler }) => {
   return (
     <input
       id="search-posts"
-      type="text"
+      type="search"
       name={name}
       placeholder="Search"
       onChange={handler}
